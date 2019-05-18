@@ -31,5 +31,20 @@
             android:orderInCategory="4"
             android:title="exit">
         </item>
+        <item
+            android:id="@+id/menu_info"
+            android:orderInCategory="1"
+            android:title="copy">
+        </item>
+        <item
+            android:id="@+id/menu_extract"
+            android:orderInCategory="2"
+            android:title="paste">
+        </item>
+        <item
+            android:id="@+id/menu_pause"
+            android:orderInCategory="4"
+            android:title="exit">
+        </item>
     </group>
 </menu>

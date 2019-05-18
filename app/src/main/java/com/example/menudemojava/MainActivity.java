@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.mymenu, menu);
+
         return super.onCreateOptionsMenu(menu);
+
     }
 
 
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // TODO Auto-generated method stub
         StringBuilder sb = new StringBuilder();
+        int id = item.getItemId();
+
+        Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
 
         // Выведем в TextView информацию о нажатом пункте меню
         sb.append("Item Menu");
@@ -55,7 +60,12 @@ public class MainActivity extends AppCompatActivity {
         sb.append("\r\n title: " + item.getTitle());
         tv.setText(sb.toString());
 
+        if (id == R.id.menu_exit) {
+            finish();
+        }
         return super.onOptionsItemSelected(item);
     }
 
 }
+
+
